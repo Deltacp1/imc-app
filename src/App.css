@@ -1,0 +1,65 @@
+.App {
+  text-align: center;
+  background-color: green; /* Fundo verde */
+  min-height: 100vh; /* Cobrir toda a altura da tela */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white; /* Cor do texto */
+  position: relative;
+  overflow: hidden; /* Esconde números que saem da tela */
+}
+
+.title {
+  font-size: 3rem; /* Tamanho grande para o título */
+  margin-bottom: 2rem; /* Espaço abaixo do título */
+  position: relative; /* Garante que o título fique acima dos números */
+  z-index: 1;
+}
+
+.start-button {
+  background-color: #285f21; /* Cor do botão */
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px; /* Bordas arredondadas */
+  transition: background-color 0.3s ease; /* Efeito de transição */
+  position: relative; /* Garante que o botão fique acima dos números */
+  z-index: 1;
+}
+
+.start-button:hover {
+  background-color: #000000; /* Cor do botão ao passar o mouse */
+}
+
+/* Estilo para os números caindo */
+.background-effect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.falling-number {
+  position: absolute;
+  color: black; /* Cor dos números */
+  font-size: 1.5rem;
+  font-family: monospace;
+  user-select: none; /* Impede a seleção de texto */
+  animation: fall linear infinite;
+}
+
+/* Animação para os números caindo */
+@keyframes fall {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(100vh);
+  }
+}
