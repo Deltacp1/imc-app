@@ -1,3 +1,6 @@
+#App com algumas páginas responsivas para calcular o imc a partir de inputs fornecidos pelo usuário.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
