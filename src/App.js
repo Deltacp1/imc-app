@@ -1,7 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
+import imc_page from './imc_page';
 
 function App() {
+  // Estado para controlar se a página da calculadora vai ser exibida
+  const [showCalculator, setShowCalculator] = useState(false);
+
+  // função para voltar pra pagina inicial
+  const handleBacktoHome = () => {
+    setShowCalculator(false);
+  };
+
   // Função para gerar números 0 e 1 aleatoriamente
   const generateRandomNumber = () => (Math.random() > 0.5 ? '0' : '1');
 
@@ -22,12 +31,25 @@ function App() {
 
   return (
     <div className="App">
-      {/* Números caindo */}
-      <div className="background-effect">{numbers}</div>
-
-      {/* Conteúdo principal */}
-      <h1 className="title">IMC Calculator</h1>
-      <button className="start-button">Iniciar</button>
+      {/* renderizacao condicional*/}
+      {showCalculator ? (
+        //exibe a calculadora de imc
+        <imc_page onBacktoHome = {handleBacktoHome}/>
+      ) : (
+        //exibe pagina inicial
+        <>
+          <div className="background-effect">{numbers}</div>
+          <div className="home-page">
+            <h1 className="title">IMC_Calculator</h1>
+            <button
+              className="start-button"
+              onClick={() => setShowCalculator(true)}  // Altera o estado ao clicar no botao
+            >
+            Iniciar
+          </button>
+          </div>
+        </>  
+      )}
     </div>
   );
 }

@@ -1,42 +1,12 @@
 .App {
   text-align: center;
-  background-color: green; /* Fundo verde */
   min-height: 100vh; /* Cobrir toda a altura da tela */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: white; /* Cor do texto */
   position: relative;
   overflow: hidden; /* Esconde números que saem da tela */
 }
 
-.title {
-  font-size: 3rem; /* Tamanho grande para o título */
-  margin-bottom: 2rem; /* Espaço abaixo do título */
-  position: relative; /* Garante que o título fique acima dos números */
-  z-index: 1;
-}
-
-.start-button {
-  background-color: #285f21; /* Cor do botão */
-  border: none;
-  padding: 1rem 2rem;
-  font-size: 1.5rem;
-  color: white;
-  cursor: pointer;
-  border-radius: 5px; /* Bordas arredondadas */
-  transition: background-color 0.3s ease; /* Efeito de transição */
-  position: relative; /* Garante que o botão fique acima dos números */
-  z-index: 1;
-}
-
-.start-button:hover {
-  background-color: #000000; /* Cor do botão ao passar o mouse */
-}
-
-/* Estilo para os números caindo */
 .background-effect {
+  background-color: green;
   position: absolute;
   top: 0;
   left: 0;
@@ -63,3 +33,36 @@
     transform: translateY(100vh);
   }
 }
+
+/* Estilos da página inicial */
+.home-page {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* Centraliza verticalmente */
+}
+
+.title {
+  font-size: 3rem; /* Tamanho grande para o título */
+  margin-bottom: 2rem; /* Espaço abaixo do título */
+  color: white;
+}
+
+.start-button {
+  background-color: #285f21; /* Cor do botão */
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px; /* Bordas arredondadas */
+  transition: background-color 0.3s ease; /* Efeito de transição */
+}
+
+.start-button:hover {
+  background-color: #000000; /* Cor do botão ao passar o mouse */
+}
+

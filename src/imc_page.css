@@ -1,9 +1,32 @@
 .imc_page{
-    text-align: center;
+    background-color: white;
+    min-height: 100vh;
     padding: 20px;
+    text-align: center;
+    position: relative;
 }
 
 .imc_page h1 {
     font-size: 2.5rem;
     margin-bottom: 20px;
+    color: #333;
+}
+
+.back-button {
+    position: fixed;
+    bottom: 20px; /* distancia do fundo */
+    left: 20px;   /* distancia da esquerda */
+    background-color: green;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    cursor: pointer;
+    border-radius: 50px;
+    box-shadow:  0 4px 6px rgba(0, 0, 0, 0.1);   /*sombra suave*/
+    transition: background-color 0.3s ease;        /* efeito transicao */
+}
+
+.back-button:hover{
+    background-color: #4fa3c7;    /* cor passando o mouse */
 }
